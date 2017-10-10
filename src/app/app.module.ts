@@ -13,13 +13,11 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
-import {ParallaxComponent} from './parallax/parallax.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ParallaxComponent,
   ],
   imports: [
     BrowserModule,
