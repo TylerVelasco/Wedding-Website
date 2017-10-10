@@ -1,0 +1,21 @@
+<header [class]="headerClass" xmlns="http://www.w3.org/1999/html">
+  <div class="inner">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="box"><h1>{{names}}</h1></div>
+      </div>
+      <div class="col-md-8">
+        <div ngbDropdown placement="bottom-right" class="d-inline-block float-right">
+          <div class="menu" id="dropdownBasic1" ngbDropdownToggle>Menu</div>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <ul>
+              <li *ngFor="let link of links; let i = index">
+                <a class="dropdown-item"><a scrollTo href="#section-{{i}}">{{link}}</a></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
