@@ -2,7 +2,7 @@
 .parallax_0 {
   /* The image used */
   /* Set a specific height */
-  height: 900px;
+  height: 720px;
 
   /* Create the parallax scrolling effect */
   background: url("../assets/large.jpg") no-repeat fixed center;
@@ -11,7 +11,7 @@
 .parallax_1{
   /* The image used */
   /* Set a specific height */
-  height: 800px;
+  height: 650px;
 
   /* Create the parallax scrolling effect */
   background: url("../assets/pup1.jpg") no-repeat fixed center;
@@ -20,7 +20,7 @@
 .parallax_2 {
   /* The image used */
   /* Set a specific height */
-  height: 800px;
+  height: 650px;
 
   /* Create the parallax scrolling effect */
   background: url("../assets/pup2.jpg") no-repeat fixed center;
@@ -29,7 +29,7 @@
 .parallax_3 {
   /* The image used */
   /* Set a specific height */
-  height: 800px;
+  height: 650px;
 
   /* Create the parallax scrolling effect */
   background: url("../assets/pup3.jpg") no-repeat fixed center;
