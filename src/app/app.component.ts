@@ -29,18 +29,19 @@ export class AppComponent {
     this.form = this.fb.group({
       name: [null, Validators.required],
       // email: ['', Validators.required],
-      numberOfGuest: [null, Validators.required],
-      attending: 0,
+      numberOfGuest: '',
+      attending: [null, Validators.required],
     });
   }
-    onSubmit() {
+    onSubmit(value: any) {
       const {name, numberOfGuest, attending} = this.form.value;
       const date = Date();
       const html = `
       <div>From: ${name}</div>
       <div>Attending: ${attending}</div>
       <div>Number of People Attending: ${numberOfGuest}</div>
-       <div>Date: ${date}</div>
+      <br>
+      <div>Date: ${date}</div>
     `;
       const formRequest = { name, numberOfGuest, date, attending, html };
       this.db.list('/messages').push(formRequest);

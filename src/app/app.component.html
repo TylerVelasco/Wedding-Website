@@ -115,7 +115,7 @@
       <input id="checkBox1" type="radio"  [(ngModel)]="showHideGuest" value="Yes" [formControl]="form.controls['attending']"> Yes
       <input id="checkBox2" type="radio"  [(ngModel)]="showHideGuest" value="No"  [formControl]="form.controls['attending']"> No
         <br>
-      <button type="submit" [disabled]="!form.invalid">Submit</button>
+      <button type="submit" [disabled]="form.invalid">Submit</button>
     </form>
   </div>
 </section>

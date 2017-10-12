@@ -23,7 +23,7 @@ exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWri
 
   const mailOptions = {
     to: 'tyler.m.velasco@gmail.com',
-    subject: `Information Request from ${val.name}`,
+    subject: `RSVP for the Wedding ${val.name}`,
     html: val.html
   };
   return mailTransport.sendMail(mailOptions).then(() => {
