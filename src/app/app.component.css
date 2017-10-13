@@ -38,9 +38,9 @@
 section {
   background-color: #fff;
 }
-h1, h2, h3, h4 {
-  font-family: 'Josefin Sans', sans-serif;
-}
+/*h1, h2, h3, h4 {*/
+  /*font-family: 'Josefin Sans', sans-serif;*/
+/*}*/
 
 p {
   font-family: 'Josefin Sans', sans-serif;
@@ -58,39 +58,39 @@ p {
   padding-top: 100px ;
   padding-bottom: 550px ;
 }
-h3 {
-  font-size: 32px;
-  line-height: 1.2em;
-  text-transform: none;
-  text-decoration: none;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-style: normal;
-  color: #1c1c1c;
-  margin: 1em 0 25px;
-}
-img {
-  display: block;
-  text-align: center;
-  margin:0 auto;
-}
-#wrapper, img{
-  width:100%;
-  height: 100%;
-}
+/*h3 {*/
+  /*font-size: 32px;*/
+  /*line-height: 1.2em;*/
+  /*text-transform: none;*/
+  /*text-decoration: none;*/
+  /*letter-spacing: 0;*/
+  /*font-weight: 400;*/
+  /*font-style: normal;*/
+  /*color: #1c1c1c;*/
+  /*margin: 1em 0 25px;*/
+/*}*/
+/*img {*/
+  /*display: block;*/
+  /*text-align: center;*/
+  /*margin:0 auto;*/
+/*}*/
+/*#wrapper, img{*/
+  /*width:100%;*/
+  /*height: 100%;*/
+/*}*/
 
-h4 {
-  font-size: 22px;
-  text-transform: none;
-  text-decoration: none;
-  padding:0;
-  margin:0;
-}
+/*h4 {*/
+  /*font-size: 22px;*/
+  /*text-transform: none;*/
+  /*text-decoration: none;*/
+  /*padding:0;*/
+  /*margin:0;*/
+/*}*/
 
 
-.desaturate{
-  border: solid 5px #000;
-}
+/*.desaturate{*/
+  /*border: solid 5px #000;*/
+/*}*/
 
 input, button, label {
   font-family: 'Josefin Sans', sans-serif;
