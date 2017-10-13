@@ -1,21 +1,69 @@
-<header [class]="headerClass" xmlns="http://www.w3.org/1999/html">
-  <div class="inner">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="box"><h1>{{names}}</h1></div>
+<!--<header [class]="headerClass" xmlns="http://www.w3.org/1999/html">-->
+  <!--<div class="inner">-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-4">-->
+        <!--<div class="box"><h1>{{names}}</h1></div>-->
+      <!--</div>-->
+      <!--<div class="col-md-8">-->
+        <!--<div ngbDropdown placement="bottom-right" class="d-inline-block float-right">-->
+          <!--<div class="menu" id="dropdownBasic1" ngbDropdownToggle>Menu</div>-->
+          <!--<div ngbDropdownMenu aria-labelledby="dropdownBasic1">-->
+            <!--<ul>-->
+              <!--<li *ngFor="let link of links; let i = index">-->
+                <!--<a class="dropdown-item"><a scrollTo href="#section-{{i}}">{{link}}</a></a>-->
+              <!--</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</header>-->
+<section class="hero is-light fixed-top">
+  <div class="hero-head">
+  <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+    <div >
+      <h1 class="title">
+      {{names}}
+    </h1>
+    </div>
+    <div class="navbar-brand">
+      <div class="navbar-burger burger is-right" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="col-md-8">
-        <div ngbDropdown placement="bottom-right" class="d-inline-block float-right">
-          <div class="menu" id="dropdownBasic1" ngbDropdownToggle>Menu</div>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <ul>
-              <li *ngFor="let link of links; let i = index">
-                <a class="dropdown-item"><a scrollTo href="#section-{{i}}">{{link}}</a></a>
-              </li>
-            </ul>
+    </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item">
+            Menu
+          </a>
+          <div class="navbar-dropdown is-right">
+                <a class="navbar-item" scrollTo href="#section-0">
+                  Our Story
+                </a>
+                <a class="navbar-item" scrollTo href="#section-1">
+                  About Us
+                </a>
+                <a class="navbar-item" scrollTo href="#section-2">
+                  When & Where
+                </a>
+                <a class="navbar-item" scrollTo href="#section-3">
+                  Registry
+                </a>
+                <a class="navbar-item" scrollTo href="#section-4">
+                  RSVP
+                </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
+  <!--</div>-->
+
+  <!-- Hero content: will be in the middle -->
   </div>
-</header>
+
+</section>
