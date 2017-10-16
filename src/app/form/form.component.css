@@ -1,0 +1,96 @@
+input, button, label, textarea {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+input[type=text] {
+  border: none;
+  width: 100%;
+  padding: 20px;
+  display: block;
+  height: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #CCC;
+  overflow: hidden;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+  font-size: 12px;
+}
+textarea{
+  border: none;
+  width: 100%;
+  padding: 20px;
+  display: block;
+  height: 80px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #CCC;
+  overflow: hidden;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+  font-size: 12px;
+}
+input[type=number] {
+  border: none;
+  width: 100%;
+  padding: 20px;
+  display: block;
+  height: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #CCC;
+  overflow: hidden;
+  margin-top: 15px;
+  transition: all 0.5s ease-in-out;
+  font-size: 12px;
+}
+:focus {
+  outline: 0;
+  border-color: #9A9898;
+}
+input[type=radio] {
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid 1px #ccc;
+  padding: 8px;
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  top: 6px;
+}
+input[type=radio]:checked {
+  border: solid 1px #000;
+  background-color: #000;
+}
+input[type=radio]:checked:after {
+  content: '\2714';
+  font-size: 10px;
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  color: #fff;
+}
+input[type=radio]:focus {
+  outline: none;
+}
+button[type=submit] {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  height: 39px;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+button[type=submit]:hover {
+  background: #000;
+  box-shadow: 0px 4px 35px -5px #eee;
+}
+button[type=submit]:disabled {
+  opacity: 0.8 !important;
+  cursor: not-allowed;
+}

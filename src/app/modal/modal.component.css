@@ -1,0 +1,23 @@
+h4 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 20px;
+  /*text-transform: uppercase;*/
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0;
+  padding-top: 20px;
+  vertical-align: middle;
+  line-height: 1em;
+  z-index: 8002;
+  position: relative;
+}
+button[type=button] {
+  /*background-color: #000;*/
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+div{
+  text-align:center;
+}
+

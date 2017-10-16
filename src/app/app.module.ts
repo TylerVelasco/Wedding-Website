@@ -13,11 +13,15 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
+import {ModalComponent} from "./modal/modal.component";
+import {FormComponent} from "./form/form.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    ModalComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,7 @@ import {HeaderComponent} from './header/header.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
+  entryComponents:[ModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
