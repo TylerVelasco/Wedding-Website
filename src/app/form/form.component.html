@@ -4,13 +4,13 @@
     RSVP
   </h3>
   <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="has-text-centered">
-    <input id="name"  maxlength=50 type="text" pattern="[a-zA-Z]" placeholder="Name" onPaste="return false" [formControl]="form.controls['name']">
+    <input id="name"  maxlength=50 type="text"  placeholder="Name" onPaste="return false" [formControl]="form.controls['name']">
 
 
     <div *ngIf="showHideGuest=='Yes'">
-      <input type="number" min="0" max="10" placeholder="# of guest" onPaste="return false" onKeyPress="if(this.value.length==2) return false;"  [formControl]="form.controls['numberOfGuest']">
-      <textarea id="people"  maxlength=500 type="textarea" pattern="[a-zA-Z]" placeholder="Guests Names" onPaste="return false" [formControl]="form.controls['people']"></textarea>
-      <textarea id="special"  maxlength=500 type="textarea" pattern="[a-zA-Z]" placeholder="Special Needs, or Loving Messages" onPaste="return false" [formControl]="form.controls['message']"></textarea>
+      <input type="number" min="0" max="10" placeholder="# of guest" onPaste="return false" onKeyPress="if(this.value.length==2) return false;" (click)="update()" (keypress)="update()" [formControl]="form.controls['numberOfGuest']">
+      <textarea id="people"  maxlength=500 type="textarea"  placeholder="Guests Names" onPaste="return false" [formControl]="form.controls['people']"></textarea>
+      <textarea id="special"  maxlength=500 type="textarea"  placeholder="Special Needs, or Loving Messages" onPaste="return false" [formControl]="form.controls['message']"></textarea>
     </div>
     <br>
 

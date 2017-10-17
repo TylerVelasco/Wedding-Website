@@ -63,11 +63,20 @@ export class FormComponent{
         else if(attending === "No"){
           this.form.get('numberOfGuest').setValidators([]);
           this.form.get('people').setValidators([]);
-          this.form.get('message').setValidators([])
         }
         this.form.get('numberOfGuest').updateValueAndValidity();
         this.form.get('people').updateValueAndValidity();
-        this.form.get('message').updateValueAndValidity();
+      }
+    );
+    this.form.get('numberOfGuest').valueChanges.subscribe(
+      (total: number)=>{
+        if(total > 0){
+          this.form.get('people').setValidators([Validators.required])
+        }
+        else if(total === 0){
+          this.form.get('people').setValidators([]);
+        }
+        this.form.get('people').updateValueAndValidity();
       }
     )
   }
