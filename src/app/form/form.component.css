@@ -1,4 +1,10 @@
-input, button, label, textarea {
+.smallLabel{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+input, button, textarea {
   font-family: 'Josefin Sans', sans-serif;
   text-transform: uppercase;
 }
@@ -82,7 +88,7 @@ button[type=submit] {
   display: block;
   height: 39px;
   border-radius: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
   transition: all 0.5s ease-in-out;
   border: none;
 }

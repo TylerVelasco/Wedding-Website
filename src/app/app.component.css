@@ -36,7 +36,35 @@
   background-size: cover;
 }
 
+.parallax_4 {
+  /* The image used */
+  /* Set a specific height */
+  height: 800px;
 
+  /* Create the parallax scrolling effect */
+  background: url("../assets/pup4.jpg") no-repeat fixed center;
+  background-size: cover;
+}
+
+.parallax_5 {
+  /* The image used */
+  /* Set a specific height */
+  height: 800px;
+
+  /* Create the parallax scrolling effect */
+  background: url("../assets/pup5.jpg") no-repeat fixed center;
+  background-size: cover;
+}
+
+.parallax_6 {
+  /* The image used */
+  /* Set a specific height */
+  height: 800px;
+
+  /* Create the parallax scrolling effect */
+  background: url("../assets/pup6.jpg") no-repeat fixed center;
+  background-size: cover;
+}
 html,body{height:100%;}
 .carousel,.item,.active{height:100%;}
 .carousel-inner{height:100%;}

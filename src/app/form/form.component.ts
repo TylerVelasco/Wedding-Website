@@ -27,7 +27,6 @@ export class FormComponent{
   createForm() {
     this.form = this.fb.group({
       name: [null, Validators.required],
-      // email: ['', Validators.required],
       attending: [null, Validators.required],
       message: '',
       people: '',
@@ -36,7 +35,10 @@ export class FormComponent{
   }
 
   onSubmit(value: any) {
-    const {name, numberOfGuest, attending, message, people} = this.form.value;
+    let {name, numberOfGuest, attending, message, people} = this.form.value;
+    if(message==''){
+      message='N/A';
+    }
     const date = Date();
     const html = `
       <div>From: ${name}</div>
@@ -55,12 +57,17 @@ export class FormComponent{
     this.form.get('attending').valueChanges.subscribe(
       (attending: string)=>{
         if(attending === "Yes"){
-          this.form.get('numberOfGuest').setValidators([Validators.required])
+          this.form.get('numberOfGuest').setValidators([Validators.required]);
+          this.form.get('people').setValidators([Validators.required])
         }
         else if(attending === "No"){
-          this.form.get('numberOfGuest').setValidators([])
+          this.form.get('numberOfGuest').setValidators([]);
+          this.form.get('people').setValidators([]);
+          this.form.get('message').setValidators([])
         }
         this.form.get('numberOfGuest').updateValueAndValidity();
+        this.form.get('people').updateValueAndValidity();
+        this.form.get('message').updateValueAndValidity();
       }
     )
   }
