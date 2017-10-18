@@ -63,6 +63,8 @@ export class FormComponent{
         else if(attending === "No"){
           this.form.get('numberOfGuest').setValidators([]);
           this.form.get('people').setValidators([]);
+          this.form.get('numberOfGuest').setValue('');
+          this.form.get('people').setValue('');
         }
         this.form.get('numberOfGuest').updateValueAndValidity();
         this.form.get('people').updateValueAndValidity();
