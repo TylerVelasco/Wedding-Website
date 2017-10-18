@@ -21,7 +21,7 @@ import {FormComponent} from "./form/form.component";
     AppComponent,
     HeaderComponent,
     ModalComponent,
-    FormComponent
+    FormComponent,
   ],
   imports: [
     BrowserModule,
