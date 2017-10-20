@@ -37,6 +37,6 @@ export class AppComponent {
     config2.duration = 2500;
     config2.easing = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
     config2.reset = false;
-    config2.mobile = false;
+    config2.mobile = true;
   }
 }
