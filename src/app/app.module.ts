@@ -4,6 +4,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ScrollToModule} from 'ng2-scroll-to';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
+import {NgsRevealModule} from 'ng-scrollreveal';
 
 
 
@@ -26,6 +27,7 @@ import {FormComponent} from "./form/form.component";
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
+    NgsRevealModule.forRoot(),
     ScrollToModule.forRoot(),
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'my-app'),

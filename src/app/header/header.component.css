@@ -36,11 +36,18 @@ a{
   cursor: pointer;
 
 }
-
-:host >>> .hero{
+.background{
+  background-color: rgba(245,245,245, .4);
+  padding: 4px;
+  /*border: 10px solid rgba(245,245,245, .5);*/
+}
+:host >>> .navbar{
   transition: background-color 1s ease-out;
 }
-
+.host >>> .navbar-menu{
+  width: 100%;
+  display:block;
+}
 .page-scroll-header {
   background-color: whitesmoke !important;
   opacity: 1;
@@ -49,3 +56,9 @@ a:not([href]):not([tabindex]) {
   color: black;
 }
 
+/*@media screen and (max-width: 1023px) {*/
+/*.navbar-menu{*/
+    /*width: 100%;*/
+    /*display:block;*/
+  /*}*/
+/*}*/
