@@ -1,14 +1,25 @@
-@media only screen and (max-width: 900px) {
-  [class*='parallax_']
-  {
-    max-width:100%;
-    width: auto;
-    background-size: contain;
-    /* Create the parallax scrolling effect */
-  }
+/*@media  screen and (max-width: 900px) {*/
+  /*[class*='parallax_']*/
+  /*{*/
+    /*max-width:100%;*/
+    /*width: auto;*/
+    /*background-size: contain;*/
+    /*!* Create the parallax scrolling effect *!*/
+  /*}*/
+/*}*/
+.carouselPadding{
+  margin-top: 78px;
+  margin-bottom: 78px;
 }
+.parallax_1{
+  /* The image used */
+  /* Set a specific height */
+  height: 400px;
 
-
+  /* Create the parallax scrolling effect */
+  background: url("../assets/pup1.jpg") no-repeat center;
+  background-size: contain;
+}
 
 .parallax_0 {
   /* The image used */
@@ -16,26 +27,18 @@
   height: 720px;
 
   /* Create the parallax scrolling effect */
-  background: url("../assets/large.jpg") no-repeat fixed center;
-  background-size: cover;
+  background: url("../assets/large.jpg") no-repeat  center;
+  background-size: 10%;
 }
-.parallax_1{
-  /* The image used */
-  /* Set a specific height */
-  height: 650px;
 
-  /* Create the parallax scrolling effect */
-  background: url("../assets/pup1.jpg") no-repeat fixed center;
-  background-size: cover;
-}
 .parallax_2 {
   /* The image used */
   /* Set a specific height */
   height: 650px;
 
   /* Create the parallax scrolling effect */
-  background: url("../assets/pup2.jpg") no-repeat fixed center;
-  background-size: cover;
+  background: url("../assets/pup2.jpg") no-repeat  center;
+  background-size: contain;
 }
 .parallax_3 {
   /* The image used */
@@ -43,8 +46,8 @@
   height: 650px;
 
   /* Create the parallax scrolling effect */
-  background: url("../assets/pup3.jpg") no-repeat fixed center;
-  background-size: cover;
+  background: url("../assets/pup3.jpg") no-repeat  center;
+  background-size: contain;
 }
 
 .parallax_4 {
@@ -53,8 +56,8 @@
   height: 800px;
 
   /* Create the parallax scrolling effect */
-  background: url("../assets/pup4.jpg") no-repeat fixed center;
-  background-size: cover;
+  background: url("../assets/pup4.jpg") no-repeat  center;
+  background-size: contain;
 }
 
 .parallax_5 {
@@ -63,8 +66,8 @@
   height: 800px;
 
   /* Create the parallax scrolling effect */
-  background: url("../assets/pup5.jpg") no-repeat fixed center;
-  background-size: cover;
+  background: url("../assets/pup5.jpg") no-repeat  center;
+  background-size: contain;
 }
 
 .parallax_6 {
@@ -73,8 +76,8 @@
   height: 800px;
 
   /* Create the parallax scrolling effect */
-  background: url("../assets/pup6.jpg") no-repeat fixed center;
-  background-size: cover;
+  background: url("../assets/pup6.jpg") no-repeat  center;
+  background-size: contain;
 }
 
 
@@ -217,4 +220,20 @@ p {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+@media only screen
+and (min-width : 769px) {
+  .carouselPadding{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  [class*='parallax_']{
+    /* The image used */
+    /* Set a specific height */
+    height: 650px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-size: cover;
+  }
 }
