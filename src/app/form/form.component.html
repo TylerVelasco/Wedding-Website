@@ -19,9 +19,8 @@
     <input id="checkBox2" type="radio" title=""  [(ngModel)]="showHideGuest" value="No"  (click)="update()" [formControl]="form.controls['attending']"> No
     <br>
 
-
-    <button type="submit" (click)="open()" [disabled]="form.invalid">Submit</button>
     <button type="submit" style="display: none;"  (click)="open()">Modal</button>
+    <button type="submit" (click)="open()" [disabled]="form.invalid">Submit</button>
     <div>
       <label class="smallLabel">* All fields required"</label>
     </div>

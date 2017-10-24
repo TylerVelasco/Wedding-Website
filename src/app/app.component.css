@@ -185,6 +185,8 @@ p {
   width: 9%;
   height: 9%;
   padding-bottom: 10px;
+  min-width: 80px;
+  min-height: 70px;
   max-width: 110px;
   max-height: 100px;
 }
