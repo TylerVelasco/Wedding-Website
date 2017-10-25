@@ -248,7 +248,7 @@ and (min-width : 769px) {
   [class*='parallax_']{
     /* The image used */
     /* Set a specific height */
-    height: 850px;
+    height: 650px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

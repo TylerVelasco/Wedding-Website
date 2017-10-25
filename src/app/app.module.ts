@@ -5,6 +5,7 @@ import {ScrollToModule} from 'ng2-scroll-to';
 import { environment } from '../environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import {NgsRevealModule} from 'ng-scrollreveal';
+import { KonamiModule } from 'ngx-konami';
 
 
 
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {ModalComponent} from "./modal/modal.component";
 import {FormComponent} from "./form/form.component";
+import {KonamiComponent} from "./konami/konami.component";
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import {FormComponent} from "./form/form.component";
     HeaderComponent,
     ModalComponent,
     FormComponent,
+    KonamiComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +35,10 @@ import {FormComponent} from "./form/form.component";
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'my-app'),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    KonamiModule
   ],
-  entryComponents:[ModalComponent],
+  entryComponents:[ModalComponent, KonamiComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

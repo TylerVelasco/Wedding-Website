@@ -24,6 +24,7 @@ export class FormComponent{
     modalRef.componentInstance.name = 'World';
   }
 
+
   createForm() {
     this.form = this.fb.group({
       name: [null, Validators.required],
