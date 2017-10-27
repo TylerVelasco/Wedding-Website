@@ -4,6 +4,7 @@
     RSVP
   </h3>
   <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="has-text-centered">
+    <input class="checkbox" type="checkbox" [formControl]="form.controls['checkbox']" value=false >
     <input id="name"  maxlength=50 type="text"  placeholder="Name" onPaste="return false" [formControl]="form.controls['name']">
 
 
@@ -14,7 +15,7 @@
     </div>
     <br>
 
-    <label>Attending?</label>
+    <label>Attending?  </label>
     <input id="checkBox1" type="radio" title=""  [(ngModel)]="showHideGuest" value="Yes" (click)="update()" [formControl]="form.controls['attending']"> Yes
     <input id="checkBox2" type="radio" title=""  [(ngModel)]="showHideGuest" value="No"  (click)="update()" [formControl]="form.controls['attending']"> No
     <br>

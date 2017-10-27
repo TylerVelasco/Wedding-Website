@@ -32,11 +32,12 @@ export class FormComponent{
       message: '',
       people: '',
       numberOfGuest: '',
+      checkbox: '',
     });
   }
 
   onSubmit(value: any) {
-    let {name, numberOfGuest, attending, message, people} = this.form.value;
+    let {name, numberOfGuest, attending, message, people, checkbox} = this.form.value;
     if(message==''){
       message='N/A';
     }
@@ -50,9 +51,16 @@ export class FormComponent{
       <br>
       <div>Date: ${date}</div>
     `;
+    console.log(checkbox);
     const formRequest = { name, numberOfGuest, date, attending, html };
-    this.db.list('/messages').push(formRequest);
-    this.form.reset();
+    if(checkbox == true) {
+      this.form.reset();
+    }
+    else
+    {
+      this.db.list('/messages').push(formRequest);
+      this.form.reset();
+    }
   }
   update(): void {
     this.form.get('attending').valueChanges.subscribe(

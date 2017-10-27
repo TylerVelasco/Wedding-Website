@@ -100,4 +100,8 @@ button[type=submit]:disabled {
   opacity: 0.8 !important;
   cursor: not-allowed;
 }
-
+.checkbox{
+  position: absolute;
+  left: -999em;
+  bottom: 999em;
+}
