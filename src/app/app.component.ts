@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from 'angularfire2/auth';
 import {AngularFireDatabase} from 'angularfire2/database';
@@ -6,6 +6,7 @@ import {ModalComponent} from "./modal/modal.component";
 import {NgbCarouselConfig, NgbModal, NgbTabset, NgbTabsetConfig} from "@ng-bootstrap/ng-bootstrap";
 import {NgsRevealConfig} from "ng-scrollreveal";
 import {KonamiComponent} from "./konami/konami.component";
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ export class AppComponent {
   fullImagePath7: string;
   fullImagePath8: string;
   showHideGuest: string;
-  constructor(private fb: FormBuilder, private af: AngularFireAuth, private db: AngularFireDatabase, private modalService: NgbModal, config: NgbCarouselConfig, config2: NgsRevealConfig) {
+  index=0;
+  constructor(private meta: Meta, private fb: FormBuilder, private af: AngularFireAuth, private db: AngularFireDatabase, private modalService: NgbModal, config: NgbCarouselConfig, config2: NgsRevealConfig) {
     this.fullImagePath1 = 'assets/pup2.jpg';
     this.fullImagePath2 = 'assets/pup1.jpg';
     this.fullImagePath3 = 'assets/dillards.jpg';
@@ -39,9 +41,20 @@ export class AppComponent {
     config2.easing = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
     config2.reset = false;
     config2.mobile = true;
+    this.meta.addTag({ name: 'robots', content: 'noindex' });
   }
   konami() {
     const modalRef = this.modalService.open(KonamiComponent);
     modalRef.componentInstance.name = 'Secret';
   }
+  // @HostListener("window:scroll", [])
+  // onScroll(): void {
+  //   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+  //     this.index+=1;
+  //     console.log("Welcome to the bottom of the page you have hit rock bottom " + this.index + " times.");
+  //     if(this.index > 9) {
+  //       window.scrollTo(0, 0);
+  //     }
+  //   }
+  // }
 }

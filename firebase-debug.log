@@ -1,0 +1,810 @@
+[debug] [2017-11-07T16:57:08.046Z] ----------------------------------------------------------------------
+[debug] [2017-11-07T16:57:08.049Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\velastm\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-11-07T16:57:08.049Z] CLI Version:   3.13.1
+[debug] [2017-11-07T16:57:08.049Z] Platform:      win32
+[debug] [2017-11-07T16:57:08.049Z] Node Version:  v6.10.3
+[debug] [2017-11-07T16:57:08.049Z] Time:          Tue Nov 07 2017 10:57:08 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:08.049Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-07T16:57:08.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-07T16:57:08.063Z] > authorizing via signed-in user
+[debug] [2017-11-07T16:57:08.065Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-07T16:57:08.065Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/48HzQnhyPXB4rNs3GKX2X3dX8gpzfAc404WIK47P_Vw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Tue Nov 07 2017 10:57:08 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:08.268Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:57:08.276Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/supriseapp  
+ Tue Nov 07 2017 10:57:08 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:08.577Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:57:08.578Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/supriseapp/tokens  
+ Tue Nov 07 2017 10:57:08 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:08.914Z] <<< HTTP RESPONSE 200
+[info] 2
+[info] 
+[info] === Deploying to 'supriseapp'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2017-11-07T16:57:09.427Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~5.4.0",
+    "firebase-functions": "^0.7.0",
+    "nodemailer": "^4.1.3"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-11-07T16:57:09.430Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Tue Nov 07 2017 10:57:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:09.430Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Tue Nov 07 2017 10:57:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:09.782Z] <<< HTTP RESPONSE 200
+[info] +  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-11-07T16:57:09.782Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2017-11-07T16:57:09.782Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/supriseapp  
+ Tue Nov 07 2017 10:57:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:09.798Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/supriseapp/apiKeys  
+ Tue Nov 07 2017 10:57:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:10.026Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:57:10.113Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-11-07T16:57:30.590Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs  
+ Tue Nov 07 2017 10:57:30 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:30.903Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:57:30.904Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables  
+ Tue Nov 07 2017 10:57:30 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:31.079Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:57:31.079Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/email  
+ Tue Nov 07 2017 10:57:31 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:31.079Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/password  
+ Tue Nov 07 2017 10:57:31 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:31.280Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:57:31.365Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (27.26 KB) for uploading
+[debug] [2017-11-07T16:57:45.670Z] >>> HTTP REQUEST GET https://www.googleapis.com/storage/v1/b/staging.supriseapp.appspot.com  
+ Tue Nov 07 2017 10:57:45 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:45.839Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:57:45.840Z] >>> HTTP REQUEST POST https://www.googleapis.com/upload/storage/v1/b/staging.supriseapp.appspot.com/o?uploadType=media&name=firebase-functions-source ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 27916,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: 'C:\\Users\\velastm\\AppData\\Local\\Temp\\firebase-functions-3520vamOM3haJBG1.zip',
+  fd: 5,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: undefined,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 27916 } 
+ Tue Nov 07 2017 10:57:45 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:57:46.338Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2017-11-07T16:57:47.899Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/supriseapp/uploads/-KyMPVeyJZfhotLgPqAr?fileCount=43&message=  
+ Tue Nov 07 2017 10:57:47 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:00.580Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:00.580Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] +  hosting: 43 files uploaded successfully
+[info] i  starting release process (may take several minutes)...
+[debug] [2017-11-07T16:58:01.591Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/projects/supriseapp/locations/us-central1/functions  
+ Tue Nov 07 2017 10:58:01 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:01.928Z] <<< HTTP RESPONSE 200
+[info] i  functions: updating function sendContactMessage...
+[debug] [2017-11-07T16:58:01.932Z] Trigger is: 
+[debug] [2017-11-07T16:58:01.933Z] >>> HTTP REQUEST PUT https://cloudfunctions.googleapis.com/v1beta2/projects/supriseapp/locations/us-central1/functions/sendContactMessage { sourceArchiveUrl: 'gs://staging.supriseapp.appspot.com/firebase-functions-source',
+  name: 'projects/supriseapp/locations/us-central1/functions/sendContactMessage',
+  entryPoint: 'sendContactMessage',
+  timeout: '60s',
+  availableMemoryMb: 256,
+  eventTrigger: 
+   { resource: 'projects/_/instances/supriseapp/refs/messages/{pushKey}',
+     eventType: 'providers/google.firebase.database/eventTypes/ref.write' } } 
+ Tue Nov 07 2017 10:58:01 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:02.271Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:02.272Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/projects/supriseapp/locations/us-central1/functions  
+ Tue Nov 07 2017 10:58:02 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:02.273Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:02 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:02.466Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:02.501Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:02.501Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:07.473Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:07 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:07.687Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:07.687Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:12.697Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:12 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:12.886Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:12.886Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:17.901Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:17 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:18.110Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:18.110Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:23.110Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:23 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:23.436Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:23.436Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:28.448Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:28 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:28.678Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:28.679Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:33.687Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:33 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:33.887Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:33.902Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:38.903Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:39.079Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:39.080Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:44.080Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:44 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:44.314Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:44.314Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:49.318Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:49 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:49.522Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:49.523Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:54.523Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:54 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:54.719Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:54.719Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:58:59.724Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:58:59 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:58:59.916Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:58:59.917Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:04.919Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:04 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:05.161Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:05.161Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:10.168Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:10 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:10.390Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:10.390Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:15.401Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:15 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:15.570Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:15.571Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:20.584Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:20 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:20.813Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:20.814Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:25.815Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:25 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:26.017Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:26.018Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:31.019Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:31 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:31.215Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:31.216Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:36.217Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:36 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:36.419Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:36.419Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:41.422Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:41 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:41.676Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:41.677Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:46.685Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:46 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:46.889Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:46.889Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:51.890Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:51 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:52.083Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:52.084Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T16:59:57.085Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 10:59:57 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T16:59:57.286Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T16:59:57.287Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:02.289Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:02 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:02.462Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:02.462Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:07.470Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:07 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:07.619Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:07.619Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:12.649Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:12 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:12.871Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:12.871Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:17.872Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:17 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:18.017Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:18.017Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:23.028Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:23 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:23.266Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:23.266Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:28.266Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:28 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:28.464Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:28.465Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:33.466Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:33 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:33.670Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:33.670Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:38.674Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:38.879Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:38.879Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:43.880Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:43 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:44.116Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:44.116Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:49.117Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:49 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:49.320Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:49.320Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:54.321Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:54 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:54.473Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:54.474Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:00:59.475Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE  
+ Tue Nov 07 2017 11:00:59 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:00:59.672Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:00:59.672Z] [functions] operation poll: sendContactMessage: update operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvM0c5c0N1ZXhXRUE is not done.
+[debug] [2017-11-07T17:04:46.989Z] ----------------------------------------------------------------------
+[debug] [2017-11-07T17:04:46.992Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\velastm\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-11-07T17:04:46.992Z] CLI Version:   3.14.0
+[debug] [2017-11-07T17:04:46.992Z] Platform:      win32
+[debug] [2017-11-07T17:04:46.993Z] Node Version:  v6.10.3
+[debug] [2017-11-07T17:04:46.993Z] Time:          Tue Nov 07 2017 11:04:46 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:04:46.993Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-07T17:04:47.007Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-07T17:04:47.008Z] > authorizing via signed-in user
+[debug] [2017-11-07T17:04:47.009Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/supriseapp  
+ Tue Nov 07 2017 11:04:47 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:04:47.339Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:04:47.339Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/supriseapp/tokens  
+ Tue Nov 07 2017 11:04:47 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:04:47.701Z] <<< HTTP RESPONSE 200
+[info] 2
+[info] 
+[info] === Deploying to 'supriseapp'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2017-11-07T17:04:48.275Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~5.4.0",
+    "firebase-functions": "^0.7.0",
+    "nodemailer": "^4.1.3"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-11-07T17:04:48.277Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Tue Nov 07 2017 11:04:48 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:04:48.278Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Tue Nov 07 2017 11:04:48 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:04:48.673Z] <<< HTTP RESPONSE 200
+[info] +  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-11-07T17:04:48.682Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2017-11-07T17:04:48.685Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/supriseapp  
+ Tue Nov 07 2017 11:04:48 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:04:48.686Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/supriseapp/apiKeys  
+ Tue Nov 07 2017 11:04:48 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:04:48.926Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:04:49.017Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-11-07T17:05:09.055Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs  
+ Tue Nov 07 2017 11:05:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:09.286Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:09.287Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables  
+ Tue Nov 07 2017 11:05:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:09.404Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:09.405Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/email  
+ Tue Nov 07 2017 11:05:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:09.406Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/password  
+ Tue Nov 07 2017 11:05:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:09.536Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:09.586Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (27.26 KB) for uploading
+[debug] [2017-11-07T17:05:23.493Z] >>> HTTP REQUEST GET https://www.googleapis.com/storage/v1/b/staging.supriseapp.appspot.com  
+ Tue Nov 07 2017 11:05:23 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:23.942Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:23.943Z] >>> HTTP REQUEST POST https://www.googleapis.com/upload/storage/v1/b/staging.supriseapp.appspot.com/o?uploadType=media&name=firebase-functions-source ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 27916,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: 'C:\\Users\\velastm\\AppData\\Local\\Temp\\firebase-functions-8060s2GDfSHkLOAl.zip',
+  fd: 5,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: undefined,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 27916 } 
+ Tue Nov 07 2017 11:05:23 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:24.350Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2017-11-07T17:05:25.785Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/supriseapp/uploads/-KyMRFi10xdPygrBSfPs?fileCount=43&message=  
+ Tue Nov 07 2017 11:05:25 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:37.998Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:37.998Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] +  hosting: 43 files uploaded successfully
+[debug] [2017-11-07T17:05:38.679Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/projects/supriseapp/locations/us-central1/functions  
+ Tue Nov 07 2017 11:05:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:38.960Z] <<< HTTP RESPONSE 200
+[info] i  functions: updating function sendContactMessage...
+[debug] [2017-11-07T17:05:38.963Z] Trigger is: 
+[debug] [2017-11-07T17:05:38.965Z] >>> HTTP REQUEST PUT https://cloudfunctions.googleapis.com/v1beta2/projects/supriseapp/locations/us-central1/functions/sendContactMessage { sourceArchiveUrl: 'gs://staging.supriseapp.appspot.com/firebase-functions-source',
+  name: 'projects/supriseapp/locations/us-central1/functions/sendContactMessage',
+  entryPoint: 'sendContactMessage',
+  timeout: '60s',
+  availableMemoryMb: 256,
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger: 
+   { resource: 'projects/_/instances/supriseapp/refs/messages/{pushKey}',
+     eventType: 'providers/google.firebase.database/eventTypes/ref.write' } } 
+ Tue Nov 07 2017 11:05:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:39.240Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:39.241Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:39 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:39.412Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:41.414Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:41 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:41.639Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:43.644Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:43 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:43.853Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:45.868Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:45 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:46.068Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:48.084Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:48 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:48.296Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:50.296Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:50 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:50.519Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:52.520Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:52 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:52.754Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:54.769Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:54 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:54.935Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:56.936Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:56 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:57.101Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:05:59.110Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:05:59 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:05:59.283Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:01.286Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:01 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:01.503Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:03.505Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:03 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:03.701Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:05.711Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:05 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:05.919Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:07.919Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:07 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:08.120Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:10.132Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:10 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:10.318Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:12.336Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:12 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:12.553Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:14.557Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:14 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:14.719Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:16.721Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:16 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:16.871Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:18.885Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:18 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:19.113Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:21.119Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:21 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:21.336Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:23.345Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:23 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:23.562Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:25.563Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:25 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:25.768Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:27.779Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:27 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:27.970Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:29.984Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:29 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:30.188Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:32.198Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:32 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:32.402Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:34.414Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:34 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:34.603Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:36.614Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:36 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:36.776Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:38.777Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:38.936Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:40.951Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:40 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:41.164Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:43.167Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:43 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:43.388Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:45.396Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:45 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:45.636Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:47.653Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:47 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:47.870Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:49.869Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:49 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:50.082Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:52.084Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:52 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:52.267Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:54.283Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:54 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:54.507Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:56.518Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:56 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:56.717Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:06:58.718Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:06:58 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:06:58.867Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:00.882Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:00 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:01.112Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:03.113Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:03 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:03.306Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:05.306Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:05 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:05.497Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:07.499Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:07 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:07.669Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:09.669Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:09.851Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:11.868Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:11 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:12.072Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:14.082Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:14 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:14.251Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:16.250Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:16 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:16.403Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:18.410Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:18 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:18.611Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:20.620Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:20 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:20.835Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:22.846Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:22 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:23.003Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:25.017Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:25 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:25.191Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:27.201Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:27 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:27.402Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:29.408Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:29 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:29.567Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:31.575Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:31 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:31.778Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:33.784Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:33 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:33.995Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:35.996Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:35 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:36.187Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:38.196Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:38.390Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:40.391Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:40 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:40.604Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:42.618Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:42 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:42.781Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:44.784Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:44 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:44.919Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:46.931Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:46 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:47.137Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:49.151Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:49 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:49.324Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:51.365Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:51 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:51.547Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:53.565Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:53 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:53.782Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:55.798Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:55 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:55.994Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:07:57.997Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:07:57 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:07:58.165Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:00.180Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:00 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:00.400Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:02.400Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:02 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:02.594Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:04.599Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:04 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:04.805Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:06.806Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:06 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:07.021Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:09.021Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:09 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:09.234Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:11.250Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:11 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:11.448Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:13.448Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:13 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:13.653Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:15.665Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:15 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:15.882Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:17.896Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvVGptVEJsd1FWYjA  
+ Tue Nov 07 2017 11:08:17 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:18.110Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:21.763Z] ----------------------------------------------------------------------
+[debug] [2017-11-07T17:08:21.763Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\velastm\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-11-07T17:08:21.763Z] CLI Version:   3.14.0
+[debug] [2017-11-07T17:08:21.763Z] Platform:      win32
+[debug] [2017-11-07T17:08:21.763Z] Node Version:  v6.10.3
+[debug] [2017-11-07T17:08:21.763Z] Time:          Tue Nov 07 2017 11:08:21 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:21.763Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-07T17:08:21.778Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-07T17:08:21.778Z] > authorizing via signed-in user
+[debug] [2017-11-07T17:08:21.778Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/supriseapp  
+ Tue Nov 07 2017 11:08:21 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:22.098Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:22.098Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/supriseapp/tokens  
+ Tue Nov 07 2017 11:08:22 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:25.323Z] <<< HTTP RESPONSE 200
+[info] 2
+[info] 
+[info] === Deploying to 'supriseapp'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2017-11-07T17:08:34.401Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~5.4.0",
+    "firebase-functions": "^0.7.0",
+    "nodemailer": "^4.1.3"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-11-07T17:08:34.403Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Tue Nov 07 2017 11:08:34 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:34.403Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Tue Nov 07 2017 11:08:34 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:34.697Z] <<< HTTP RESPONSE 200
+[info] +  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-11-07T17:08:34.747Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2017-11-07T17:08:34.747Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/supriseapp  
+ Tue Nov 07 2017 11:08:34 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:34.747Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/supriseapp/apiKeys  
+ Tue Nov 07 2017 11:08:34 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:08:34.964Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:08:41.476Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-11-07T17:09:01.745Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs  
+ Tue Nov 07 2017 11:09:01 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:01.999Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:02.000Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables  
+ Tue Nov 07 2017 11:09:02 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:02.140Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:02.141Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/email  
+ Tue Nov 07 2017 11:09:02 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:02.141Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/password  
+ Tue Nov 07 2017 11:09:02 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:02.312Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:02.362Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (27.26 KB) for uploading
+[debug] [2017-11-07T17:09:16.444Z] >>> HTTP REQUEST GET https://www.googleapis.com/storage/v1/b/staging.supriseapp.appspot.com  
+ Tue Nov 07 2017 11:09:16 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:16.632Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:16.633Z] >>> HTTP REQUEST POST https://www.googleapis.com/upload/storage/v1/b/staging.supriseapp.appspot.com/o?uploadType=media&name=firebase-functions-source ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 27913,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: 'C:\\Users\\velastm\\AppData\\Local\\Temp\\firebase-functions-4448uzRai7vBhMUR.zip',
+  fd: 5,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: undefined,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 27913 } 
+ Tue Nov 07 2017 11:09:16 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:17.106Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2017-11-07T17:09:18.594Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/supriseapp/uploads/-KyMS8STyHEdL0ZFx1Do?fileCount=43&message=  
+ Tue Nov 07 2017 11:09:18 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:31.164Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:31.164Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] +  hosting: 43 files uploaded successfully
+[debug] [2017-11-07T17:09:31.705Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/projects/supriseapp/locations/us-central1/functions  
+ Tue Nov 07 2017 11:09:31 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:31.980Z] <<< HTTP RESPONSE 200
+[info] i  functions: updating function sendContactMessage...
+[debug] [2017-11-07T17:09:31.983Z] Trigger is: 
+[debug] [2017-11-07T17:09:31.985Z] >>> HTTP REQUEST PUT https://cloudfunctions.googleapis.com/v1beta2/projects/supriseapp/locations/us-central1/functions/sendContactMessage { sourceArchiveUrl: 'gs://staging.supriseapp.appspot.com/firebase-functions-source',
+  name: 'projects/supriseapp/locations/us-central1/functions/sendContactMessage',
+  entryPoint: 'sendContactMessage',
+  timeout: '60s',
+  availableMemoryMb: 256,
+  labels: { 'deployment-tool': 'cli-firebase' },
+  eventTrigger: 
+   { resource: 'projects/_/instances/supriseapp/refs/messages/{pushKey}',
+     eventType: 'providers/google.firebase.database/eventTypes/ref.write' } } 
+ Tue Nov 07 2017 11:09:31 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:32.263Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:32.265Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:32 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:32.490Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:34.491Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:34 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:34.711Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:36.712Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:36 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:36.944Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:38.944Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:39.418Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:41.424Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:41 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:41.584Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:43.600Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:43 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:43.801Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:45.802Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:45 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:46.020Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:48.034Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:48 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:48.235Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:50.236Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:50 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:50.446Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:52.451Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:52 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:52.600Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:54.604Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:54 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:54.821Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:56.822Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:56 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:56.969Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:09:58.970Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:09:58 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:09:59.195Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:10:01.206Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:10:01 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:10:01.421Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:10:03.434Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:10:03 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:10:03.641Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:10:05.650Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:10:05 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:10:05.850Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:10:07.852Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:10:07 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:10:08.053Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:10:10.061Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:10:10 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:10:10.267Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:10:12.284Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:10:12 GMT-0600 (Central Standard Time)
+[debug] [2017-11-07T17:10:12.501Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-07T17:10:14.516Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1beta2/operations/c3VwcmlzZWFwcC91cy1jZW50cmFsMS9zZW5kQ29udGFjdE1lc3NhZ2UvWlpKYkpnZVhvQWM  
+ Tue Nov 07 2017 11:10:14 GMT-0600 (Central Standard Time)
