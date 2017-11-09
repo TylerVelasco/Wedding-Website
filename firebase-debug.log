@@ -1,0 +1,116 @@
+[debug] [2017-11-09T12:32:05.051Z] ----------------------------------------------------------------------
+[debug] [2017-11-09T12:32:05.051Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\velastm\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-11-09T12:32:05.051Z] CLI Version:   3.14.0
+[debug] [2017-11-09T12:32:05.051Z] Platform:      win32
+[debug] [2017-11-09T12:32:05.051Z] Node Version:  v6.10.3
+[debug] [2017-11-09T12:32:05.051Z] Time:          Thu Nov 09 2017 06:32:05 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:05.051Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-09T12:32:05.067Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-09T12:32:05.067Z] > authorizing via signed-in user
+[debug] [2017-11-09T12:32:05.067Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-09T12:32:05.067Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/48HzQnhyPXB4rNs3GKX2X3dX8gpzfAc404WIK47P_Vw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Nov 09 2017 06:32:05 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:05.341Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-09T12:32:05.349Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/supriseapp  
+ Thu Nov 09 2017 06:32:05 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:05.684Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-09T12:32:05.684Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/supriseapp/tokens  
+ Thu Nov 09 2017 06:32:05 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:06.100Z] <<< HTTP RESPONSE 200
+[info] 2
+[info] 
+[info] === Deploying to 'supriseapp'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2017-11-09T12:32:06.518Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "~5.4.0",
+    "firebase-functions": "^0.7.0",
+    "nodemailer": "^4.1.3"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-11-09T12:32:06.518Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Thu Nov 09 2017 06:32:06 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:06.518Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Thu Nov 09 2017 06:32:06 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:07.215Z] <<< HTTP RESPONSE 200
+[info] +  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-11-09T12:32:07.215Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2017-11-09T12:32:07.233Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/supriseapp  
+ Thu Nov 09 2017 06:32:07 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:07.234Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/supriseapp/apiKeys  
+ Thu Nov 09 2017 06:32:07 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:07.482Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-09T12:32:07.584Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2017-11-09T12:32:37.966Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs  
+ Thu Nov 09 2017 06:32:37 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:38.257Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-09T12:32:38.258Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables  
+ Thu Nov 09 2017 06:32:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:38.418Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-09T12:32:38.418Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/email  
+ Thu Nov 09 2017 06:32:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:38.418Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/supriseapp/configs/gmail/variables/password  
+ Thu Nov 09 2017 06:32:38 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:38.585Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-09T12:32:38.600Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (27.26 KB) for uploading
+[debug] [2017-11-09T12:32:59.717Z] >>> HTTP REQUEST GET https://www.googleapis.com/storage/v1/b/staging.supriseapp.appspot.com  
+ Thu Nov 09 2017 06:32:59 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:32:59.944Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-09T12:32:59.945Z] >>> HTTP REQUEST POST https://www.googleapis.com/upload/storage/v1/b/staging.supriseapp.appspot.com/o?uploadType=media&name=firebase-functions-source ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 27913,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: true,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     defaultEncoding: 'utf8',
+     ranOut: false,
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: 'C:\\Users\\velastm\\AppData\\Local\\Temp\\firebase-functions-516oGDeCzhap21a.zip',
+  fd: 5,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: undefined,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 27913 } 
+ Thu Nov 09 2017 06:32:59 GMT-0600 (Central Standard Time)
+[debug] [2017-11-09T12:33:00.552Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2017-11-09T12:33:01.952Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/supriseapp/uploads/-KyVl0f0ag6O1ZHhE_j2?fileCount=43&message=  
+ Thu Nov 09 2017 06:33:01 GMT-0600 (Central Standard Time)
