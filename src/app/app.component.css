@@ -1,82 +1,43 @@
-/*@media  screen and (max-width: 900px) {*/
-  /*[class*='parallax_']*/
-  /*{*/
-    /*max-width:100%;*/
-    /*width: auto;*/
-    /*background-size: contain;*/
-    /*!* Create the parallax scrolling effect *!*/
-  /*}*/
-/*}*/
+
 .carouselPadding{
   margin-top: 78px;
   margin-bottom: 78px;
 }
-.parallax_1{
-  /* The image used */
-  /* Set a specific height */
-  height: 400px;
-
-  /* Create the parallax scrolling effect */
-  background: url("../assets/pup1.jpg") no-repeat center;
-  background-size: contain;
-}
-
 .parallax_0 {
-  /* The image used */
-  /* Set a specific height */
   height: 720px;
 
   /* Create the parallax scrolling effect */
   background: url("../assets/large.jpg") no-repeat  center;
   background-size: 10%;
 }
-
+.parallax_1{
+  height: 400px;
+  background: url("../assets/Image4.jpg") no-repeat center;
+  background-size: contain;
+}
 .parallax_2 {
-  /* The image used */
-  /* Set a specific height */
   height: 650px;
-
-  /* Create the parallax scrolling effect */
   background: url("../assets/pup2.jpg") no-repeat  center;
   background-size: contain;
 }
 .parallax_3 {
-  /* The image used */
-  /* Set a specific height */
   height: 650px;
-
-  /* Create the parallax scrolling effect */
   background: url("../assets/pup3.jpg") no-repeat  center;
   background-size: contain;
 }
-
 .parallax_4 {
-  /* The image used */
-  /* Set a specific height */
   height: 200px;
-
-  /* Create the parallax scrolling effect */
-  background: url("../assets/pup4.jpg") no-repeat  center;
+  background: url("../assets/Image3.jpg") no-repeat  center;
   background-size: contain;
 }
-
 .parallax_5 {
-  /* The image used */
-  /* Set a specific height */
   height: 200px;
-
-  /* Create the parallax scrolling effect */
-  background: url("../assets/pup5.jpg") no-repeat  center;
+  background: url("../assets/Image2.jpg") no-repeat  center;
   background-size: contain;
 }
-
 .parallax_6 {
-  /* The image used */
-  /* Set a specific height */
   height: 200px;
-
-  /* Create the parallax scrolling effect */
-  background: url("../assets/pup6.jpg") no-repeat  center;
+  background: url("../assets/Image1.jpg") no-repeat  center;
   background-size: contain;
 }
 
@@ -242,16 +203,36 @@ and (min-width : 480px) {
 @media only screen
 and (min-width : 769px) {
   .carouselPadding{
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 0;
   }
-  [class*='parallax_']{
-    /* The image used */
-    /* Set a specific height */
+  .parallax_1 {
     height: 650px;
+    background-size: cover;
+  }
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+  .parallax_2 {
+    height: 650px;
+    background-size: cover;
+  }
+
+  .parallax_3 {
+    height: 650px;
+    background-size: cover;
+  }
+
+  .parallax_4 {
+    height:98vh;
+    background-size: cover;
+  }
+
+  .parallax_5 {
+    height:98vh;
+    background-size: cover;
+  }
+
+  .parallax_6 {
+    height:98vh;
     background-size: cover;
   }
 }
