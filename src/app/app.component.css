@@ -32,7 +32,7 @@
 }
 .parallax_5 {
   height: 200px;
-  background: url("../assets/Image2.jpg") no-repeat  center;
+  background: url("../assets/Image5.jpg") no-repeat  center;
   background-size: contain;
 }
 .parallax_6 {
@@ -209,31 +209,37 @@ and (min-width : 769px) {
   .parallax_1 {
     height: 650px;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .parallax_2 {
     height: 650px;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .parallax_3 {
     height: 650px;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .parallax_4 {
     height:98vh;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .parallax_5 {
     height:98vh;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .parallax_6 {
     height:98vh;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 
