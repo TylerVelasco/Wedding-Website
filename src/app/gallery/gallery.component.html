@@ -1,0 +1,30 @@
+<section id="section-5" class="section is-medium">
+
+  <div class="modal fade" id="selectedImageModal" style="padding-top: 100px;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <!--<img *ngIf="selectedImage" src="{{selectedImage.url}}" >-->
+          <div class="selectedImage modalImage" *ngIf="selectedImage">
+            <img src="{{selectedImage.url}}" >
+              <i class="left" (click)=navigate(false)></i>
+              <i class="right" (click)=navigate(true)></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-columns" id="thumbnailsList">
+    <div class="card" *ngFor="let image of images; let i=index">
+      <div class="clearfix" *ngIf="i % 3 == 0"></div>
+      <div>
+        <img class="card-img-top img-fluid" id="myImg" src="{{image.url}}"
+           data-toggle="modal" data-target="#selectedImageModal"
+           (click)=setSelectedImage(image)>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

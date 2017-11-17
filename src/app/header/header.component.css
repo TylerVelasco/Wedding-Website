@@ -75,3 +75,8 @@ a:not([href]):not([tabindex]) {
     /*display:block;*/
   /*}*/
 /*}*/
+
+a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
+  background-color: whitesmoke;
+  color: black;
+}

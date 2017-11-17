@@ -3,7 +3,7 @@
   <nav class="navbar" [ngClass]= "{'page-scroll-header': isScrolled}">
     <div>
       <h1 class="title">
-      <div class="background"> {{names}}</div>
+      <h1 class="background"> {{names}}</h1>
     </h1>
     </div>
     <div class="navbar-brand">
@@ -17,27 +17,33 @@
         <div class="navbar-start"></div>
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-item">
-            <div class="background">Menu</div>
+          <a class="navbar-item" routerLink="/homepage">
+            <div class="background">
+              Home
+            </div>
           </a>
           <div class="navbar-dropdown is-right">
-                <a class="navbar-item" scrollTo  href="#section-0">
-                  Our Story
-                </a>
-                <a class="navbar-item" scrollTo href="#section-1">
-                  About Us
-                </a>
-                <a class="navbar-item" scrollTo href="#section-2">
-                  When & Where
-                </a>
-                <a class="navbar-item" scrollTo href="#section-3">
-                  Registry
-                </a>
-                <a class="navbar-item" scrollTo href="#section-4">
-                  RSVP
-                </a>
+            <a class="navbar-item" [routerLink]="['/homepage']" fragment="section-0">
+
+              Our Story
+            </a>
+            <a class="navbar-item" [routerLink]="['/homepage']" fragment="section-1">
+              About Us
+            </a>
+            <a class="navbar-item" [routerLink]="['/homepage']" fragment="section-2">
+              When & Where
+            </a>
+            <a class="navbar-item" [routerLink]="['/homepage']" fragment="section-3">
+              Registry
+            </a>
+            <a class="navbar-item" [routerLink]="['/homepage']" fragment="section-4">
+              RSVP
+            </a>
             </div>
           </div>
+          <a class="navbar-item" routerLink="/gallery">
+            <div class="background">Gallery</div>
+          </a>
         </div>
       </div>
     </nav>

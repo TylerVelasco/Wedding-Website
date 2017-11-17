@@ -1,0 +1,55 @@
+[debug] [2017-11-17T19:31:14.123Z] ----------------------------------------------------------------------
+[debug] [2017-11-17T19:31:14.125Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\velastm\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2017-11-17T19:31:14.126Z] CLI Version:   3.14.0
+[debug] [2017-11-17T19:31:14.126Z] Platform:      win32
+[debug] [2017-11-17T19:31:14.126Z] Node Version:  v6.10.3
+[debug] [2017-11-17T19:31:14.126Z] Time:          Fri Nov 17 2017 13:31:14 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:14.126Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-17T19:31:14.141Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-17T19:31:14.141Z] > authorizing via signed-in user
+[debug] [2017-11-17T19:31:14.143Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-11-17T19:31:14.143Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/48HzQnhyPXB4rNs3GKX2X3dX8gpzfAc404WIK47P_Vw',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Nov 17 2017 13:31:14 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:14.343Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-17T19:31:14.350Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/supriseapp  
+ Fri Nov 17 2017 13:31:14 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:14.683Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-17T19:31:14.683Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/supriseapp/tokens  
+ Fri Nov 17 2017 13:31:14 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:15.204Z] <<< HTTP RESPONSE 200
+[info] 2
+[info] 
+[info] === Deploying to 'supriseapp'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2017-11-17T19:31:15.811Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "dependencies": {
+    "firebase-admin": "^5.4.3",
+    "firebase-functions": "^0.7.0",
+    "nodemailer": "^4.1.3"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[info] i  runtimeconfig: ensuring necessary APIs are enabled...
+[debug] [2017-11-17T19:31:15.814Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Fri Nov 17 2017 13:31:15 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:15.814Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/supriseapp?view=CONSUMER_VIEW  
+ Fri Nov 17 2017 13:31:15 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:16.207Z] <<< HTTP RESPONSE 200
+[info] +  runtimeconfig: all necessary APIs are enabled
+[debug] [2017-11-17T19:31:16.267Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2017-11-17T19:31:16.270Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/supriseapp  
+ Fri Nov 17 2017 13:31:16 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:16.271Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/supriseapp/apiKeys  
+ Fri Nov 17 2017 13:31:16 GMT-0600 (Central Standard Time)
+[debug] [2017-11-17T19:31:16.497Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-17T19:31:16.694Z] <<< HTTP RESPONSE 200

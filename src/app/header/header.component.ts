@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import {NgbDropdownConfig} from '@ng-bootstrap/ng-bootstrap';
   }
 })
 
-export class HeaderComponent  {
+export class HeaderComponent implements OnInit {
   links: string[] = [
     'Our Story',
     'About Us',
@@ -24,13 +25,7 @@ export class HeaderComponent  {
   startPos: Number = 0;
   changePos: Number = 100;
 
-  // headerClass = '';
-  // private sections: any;
-  // private rect: any;
-  // private active: string;
-  // private element: HTMLElement;
-  // element: ElementRef,
-  constructor(config: NgbDropdownConfig) {
+  constructor(config: NgbDropdownConfig, private route: ActivatedRoute) {
     // this.element = element.nativeElement;
     config.autoClose = true;
     document.addEventListener('DOMContentLoaded', function () {
@@ -57,6 +52,7 @@ export class HeaderComponent  {
         });
       }
     });
+
   }
   updateHeader(evt) {
     this.currPos = (window.pageYOffset || evt.target.scrollTop) - (evt.target.clientTop || 0);
@@ -66,31 +62,9 @@ export class HeaderComponent  {
       this.isScrolled = false;
     }
   }
-  // ngOnInit(): void {
-  //   this.rect = this.element.getBoundingClientRect();
-  //
-  //   const sections = document.getElementsByClassName('content-section');
-  //   this.sections = Array.from(sections).map(s => {
-  //     return {id: s.id, rect: s.getBoundingClientRect()};
-  //   });
-  //
-  //   window.addEventListener('scroll', this.scroll.bind(this));
-  // }
-  // scroll(ev) {
-  //   const yOffset = window.window.pageYOffset;
-  //   this.headerClass = yOffset > this.rect.height ? 'scrolled' : '';
-  //
-  //   if (yOffset === 0) {
-  //     this.active = '';
-  //     return;
-  //   }
-  //
-  //   for (const section of this.sections){
-  //     if (yOffset >= section.rect.top &&
-  //       yOffset <= (section.rect.top + section.rect.height)) {
-  //       this.active = section.id;
-  //     }
-  //   }
-  // }
+  private fragment: string;
+  ngOnInit() {
+    this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
+  }
 
 }
