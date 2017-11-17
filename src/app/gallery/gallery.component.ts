@@ -31,9 +31,9 @@ import {Component, Input, OnInit, VERSION} from '@angular/core';
 //   }
 //
 //   imagesArray: Array<Image> = [
-//     new Image('../assets/img/gallery/Image1.jpg'),
-//     new Image('../assets/img/gallery/Image2.jpg'),
-//     new Image('../assets/img/gallery/Image3.jpg'),
+//     new Image('../assets/img/gallery/Image14.jpg'),
+//     new Image('../assets/img/gallery/Image17.jpg'),
+//     new Image('../assets/img/gallery/Image10.jpg'),
 //     new Image('../assets/img/gallery/Image4.jpg'),
 //     new Image('../assets/img/gallery/Image5.jpg')
 //   ];
@@ -43,7 +43,7 @@ import {Component, Input, OnInit, VERSION} from '@angular/core';
 //
 //   // array with a single image inside (the first one)
 //   singleImage: Observable<Array<Image>> = Observable.of([
-//     new Image('../assets/img/gallery/Image1.jpg')]
+//     new Image('../assets/img/gallery/Image14.jpg')]
 //   );
 //
 //   imagesArraySubscribed: Array<Image>;
@@ -131,15 +131,15 @@ export class GalleryComponent implements OnInit{
   images:object[]=[];
   constructor(){
     // this.images = [
-    //   {"url":"../assets/Image1.jpg"},
-    //   {"url":"../assets/Image2.jpg"},
-    //   {"url":"../assets/Image3.jpg"},
+    //   {"url":"../assets/Image14.jpg"},
+    //   {"url":"../assets/Image17.jpg"},
+    //   {"url":"../assets/Image10.jpg"},
     //   {"url":"../assets/Image4.jpg"},
     //   {"url":"../assets/Image5.jpg"},
     //   {"url":"../assets/Image5.jpg"},
-    //   {"url":"../assets/Image3.jpg"},
-    //   {"url":"../assets/Image1.jpg"},
-    //   {"url":"../assets/Image2.jpg"},
+    //   {"url":"../assets/Image10.jpg"},
+    //   {"url":"../assets/Image14.jpg"},
+    //   {"url":"../assets/Image17.jpg"},
     //   {"url":"../assets/Image4.jpg"},
     //   {"url":"http://your_image11_url"},
     //   {"url":"http://your_image12_url"}
@@ -149,12 +149,10 @@ export class GalleryComponent implements OnInit{
     this.loadImages();
   }
  loadImages(){
-   for(let i=1; i<5; i++)
+   for(let i=1; i<14; i++)
    {
      // console.log(i);
-     this.images.push({"url":"../assets/Image"+i+".jpg"});
-     this.images.push({"url":"../assets/Image"+(i+1)+".jpg"})
-     this.images.push({"url":"../assets/Image"+(i)+".jpg"})
+     this.images.push({"url":"../assets/Images/Image"+i+".jpg"});
    }
  }
   setSelectedImage(image){

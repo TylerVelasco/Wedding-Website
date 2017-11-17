@@ -1,18 +1,19 @@
 <section id="section-5" class="section is-medium">
 
-  <div class="modal fade" id="selectedImageModal" style="padding-top: 100px;">
+  <div class="modal fade" id="selectedImageModal" style="padding-top: 0px;">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body">
           <!--<img *ngIf="selectedImage" src="{{selectedImage.url}}" >-->
           <div class="selectedImage modalImage" *ngIf="selectedImage">
-            <img src="{{selectedImage.url}}" >
-              <i class="left" (click)=navigate(false)></i>
-              <i class="right" (click)=navigate(true)></i>
+            <img class="center" src="{{selectedImage.url}}" >
           </div>
         </div>
       </div>
     </div>
+    <a class="fa fa-times fa-2x"  id="close" data-dismiss="modal"></a>
+    <a class="left" (click)=navigate(false)></a>
+    <a class="right" (click)=navigate(true)></a>
   </div>
   <div class="card-columns" id="thumbnailsList">
     <div class="card" *ngFor="let image of images; let i=index">

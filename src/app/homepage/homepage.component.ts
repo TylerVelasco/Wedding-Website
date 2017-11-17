@@ -79,10 +79,6 @@ export class HomePageComponent{
                 this.goToHead(element);
                 this.currentUrl = s.url;
               }
-              else if (this.currentUrl.indexOf("/homepage")!==-1) {
-                this.goToHead(element);
-                this.currentUrl = s.url;
-              }
               else if(this.currentUrl.indexOf("/homepage#")==-1) {
                 this.goToHead2(element);
                 this.currentUrl = s.url;
