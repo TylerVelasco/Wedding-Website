@@ -105,3 +105,6 @@ button[type=submit]:disabled {
   left: -999em;
   bottom: 999em;
 }
+.submit{
+  cursor: pointer;
+}

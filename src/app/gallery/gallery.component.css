@@ -10,6 +10,7 @@ img{
   max-height: 95vh;
   width: auto;
   top:50%;
+  vertical-align: middle;
 }
 img.center {
   display: block;
