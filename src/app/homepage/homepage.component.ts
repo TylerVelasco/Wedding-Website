@@ -57,51 +57,28 @@ export class HomePageComponent{
     config2.easing = 'cubic-bezier(0.645, 0.045, 0.355, 1)';
     config2.reset = false;
     config2.mobile = true;
-    this.meta.addTag({ name: 'robots', content: 'noindex' });
-    this.document = 'h3';
-    // router.events.subscribe(s => {
-    //   if (s instanceof NavigationEnd) {
-    //     const tree = router.parseUrl(router.url);
-    //     if (tree.fragment) {
-    //       const element = document.querySelector("#" + tree.fragment);
-    //       if (element) {
-    //         element.scrollIntoView(element); }
-    //     }
-    //   }
-    // });
+
     router.events.subscribe(s => {
       if (s instanceof NavigationEnd)
       {
         const tree = router.parseUrl(router.url);
-          // if (tree.fragment) {
               const element = document.querySelector("#" + tree.fragment);
-              if (this.currentUrl.indexOf("/homepage#")!==-1) {
-                this.goToHead(element);
-                this.currentUrl = s.url;
-              }
-              else if(this.currentUrl.indexOf("/homepage#")==-1) {
-                this.goToHead2(element);
+              if(this.currentUrl.indexOf("/gallery")!==-1) {
+                this.goToHead(element, -700);
                 this.currentUrl = s.url;
               }
           }
-      // }
     });
   }
-  public goToHead(element): void {
-  let pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(this.document, element);
-  this.pageScrollService.start(pageScrollInstance);
-};
-  public goToHead2(element): void {
-    let pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance({document: this.document, scrollTarget: element, pageScrollOffset: -700});
+  public goToHead(element, offset): void {
+    let pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance({document: this.document, scrollTarget: element, pageScrollOffset: offset});
     this.pageScrollService.start(pageScrollInstance);
   };
+
+
   konami() {
     const modalRef = this.modalService.open(KonamiComponent);
     modalRef.componentInstance.name = 'Secret';
-  }
-  updateState(id){
-    console.log(id);
-    this.location.replaceState("/homepage"+id);
   }
   // @HostListener("window:scroll", [])
   // onScroll(): void {
