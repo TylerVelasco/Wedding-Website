@@ -6,7 +6,9 @@ header {
   position: fixed;
   transition: all 100ms linear 100ms;
 }
-
+#galleryLink{
+  display: none;
+}
 h1 {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
@@ -40,6 +42,9 @@ and (min-width : 769px) {
   .page-scroll-header {
     background-color: whitesmoke !important;
     opacity: 1;
+  }
+  #galleryLink{
+    display: block;
   }
 }
 a{

@@ -11,7 +11,7 @@
     <div *ngIf="showHideGuest=='Yes'">
       <input type="number" min="0" max="10" placeholder="# of guest" onPaste="return false" onKeyPress="if(this.value.length==2) return false;" (click)="update()" (keypress)="update()" [formControl]="form.controls['numberOfGuest']">
       <textarea id="people"  maxlength=500 type="textarea"  placeholder="Guests Names" onPaste="return false" [formControl]="form.controls['people']"></textarea>
-      <textarea id="special"  maxlength=500 type="textarea"  placeholder="Special Needs, or Loving Messages" onPaste="return false" [formControl]="form.controls['message']"></textarea>
+      <textarea id="special"  maxlength=500 type="textarea"  placeholder="Special Needs, Accommodations, or Loving Messages" onPaste="return false" [formControl]="form.controls['message']"></textarea>
     </div>
     <br>
 

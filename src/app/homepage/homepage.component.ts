@@ -42,14 +42,10 @@ export class HomePageComponent{
               private location: Location,
               @Inject(DOCUMENT)
               private document: any) {
-    this.fullImagePath1 = 'assets/pup2.jpg';
-    this.fullImagePath2 = 'assets/pup1.jpg';
+    this.fullImagePath1 = 'assets/Image-AboutUs-breigh.jpg';
+    this.fullImagePath2 = 'assets/Image-AboutUs-tyler.jpg';
     this.fullImagePath3 = 'assets/dillards.jpg';
     this.fullImagePath4 = 'assets/bbb.jpg';
-    this.fullImagePath5 = 'assets/pup3.jpg';
-    this.fullImagePath6 = 'assets/pup4.jpg';
-    this.fullImagePath7 = 'assets/pup5.jpg';
-    this.fullImagePath8 = 'assets/pup6.jpg';
     // customize default values of carousels used by this component tree
     config.interval = 10000;
 

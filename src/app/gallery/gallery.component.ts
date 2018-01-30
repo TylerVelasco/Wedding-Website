@@ -32,9 +32,9 @@ import {Component, Input, OnInit, VERSION} from '@angular/core';
 //
 //   imagesArray: Array<Image> = [
 //     new Image('../assets/img/gallery/Image14.jpg'),
-//     new Image('../assets/img/gallery/Image17.jpg'),
+//     new Image('../assets/img/gallery/Location.jpg'),
 //     new Image('../assets/img/gallery/Image10.jpg'),
-//     new Image('../assets/img/gallery/Image4.jpg'),
+//     new Image('../assets/img/gallery/RSVP.jpg'),
 //     new Image('../assets/img/gallery/Image5.jpg')
 //   ];
 //
@@ -132,15 +132,15 @@ export class GalleryComponent implements OnInit{
   constructor(){
     // this.images = [
     //   {"url":"../assets/Image14.jpg"},
-    //   {"url":"../assets/Image17.jpg"},
+    //   {"url":"../assets/Location.jpg"},
     //   {"url":"../assets/Image10.jpg"},
-    //   {"url":"../assets/Image4.jpg"},
+    //   {"url":"../assets/RSVP.jpg"},
     //   {"url":"../assets/Image5.jpg"},
     //   {"url":"../assets/Image5.jpg"},
     //   {"url":"../assets/Image10.jpg"},
     //   {"url":"../assets/Image14.jpg"},
-    //   {"url":"../assets/Image17.jpg"},
-    //   {"url":"../assets/Image4.jpg"},
+    //   {"url":"../assets/Location.jpg"},
+    //   {"url":"../assets/RSVP.jpg"},
     //   {"url":"http://your_image11_url"},
     //   {"url":"http://your_image12_url"}
     // ];
@@ -149,7 +149,7 @@ export class GalleryComponent implements OnInit{
     this.loadImages();
   }
  loadImages(){
-   for(let i=1; i<14; i++)
+   for(let i=1; i<=17; i++)
    {
      // console.log(i);
      this.images.push({"url":"../assets/Images/Image"+i+".jpg"});

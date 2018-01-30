@@ -4,25 +4,23 @@
   margin-bottom: 78px;
 }
 .parallax_0 {
-  height: 720px;
-
-  /* Create the parallax scrolling effect */
-  background: url("../../assets/large.jpg") no-repeat  center;
-  background-size: 10%;
+  height: 400px;
+  background: url("../../assets/RSVP.jpg") no-repeat center;
+  background-size: contain;
 }
 .parallax_1{
   height: 400px;
-  background: url("../../assets/Image4.jpg") no-repeat center;
+  background: url("../../assets/Registry.jpg") no-repeat center;
   background-size: contain;
 }
 .parallax_2 {
-  height: 650px;
-  background: url("../../assets/pup2.jpg") no-repeat  center;
+  height: 400px;
+  background: url("../../assets/Location.jpg") no-repeat  center;
   background-size: contain;
 }
 .parallax_3 {
-  height: 650px;
-  background: url("../../assets/pup3.jpg") no-repeat  center;
+  height: 400px;
+  background: url("../../assets/AboutUs.jpg") no-repeat  center;
   background-size: contain;
 }
 .parallax_4 {
@@ -40,6 +38,13 @@
   background: url("../../assets/Image1.jpg") no-repeat  center;
   background-size: contain;
 }
+.aboutUsImage{
+  height: 75%;
+  width: 75%;
+  display:block;
+  margin:auto;
+}
+
 
 
 html,body,div{height:100%;}
@@ -206,20 +211,32 @@ and (min-width : 769px) {
     margin-top: 0px;
     margin-bottom: 0;
   }
-  .parallax_1 {
+  .aboutUsImage{
+    height: 100%;
+    width: 100%;
+    display:block;
+    margin:auto;
+  }
+  .parallax_0 {
     height: 650px;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .parallax_1 {
+    height: 750px;
     background-size: cover;
     background-attachment: fixed;
   }
 
   .parallax_2 {
-    height: 650px;
+    height: 750px;
     background-size: cover;
     background-attachment: fixed;
   }
 
   .parallax_3 {
-    height: 650px;
+    height: 750px;
     background-size: cover;
     background-attachment: fixed;
   }
