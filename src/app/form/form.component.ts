@@ -51,14 +51,13 @@ export class FormComponent{
       <br>
       <div>Date: ${date}</div>
     `;
-    console.log(checkbox);
     const formRequest = { name, numberOfGuest, date, attending, html };
     if(checkbox == true) {
       this.form.reset();
     }
     else
     {
-      this.db.list('/messages').push(formRequest);
+      this.db.list('/live').push(formRequest);
       this.form.reset();
     }
   }
