@@ -38,16 +38,18 @@ export class FormComponent{
 
   onSubmit(value: any) {
     let {name, numberOfGuest, attending, message, people, checkbox} = this.form.value;
-    if(message==''){
+    if(attending=='No'){
       message='N/A';
+      numberOfGuest='0';
+      people='None';
     }
-    const date = Date();
+    const date = new Date();
     const html = `
-      <div>From: ${name}</div>
+      <div>From: ${name.toUpperCase()}</div>
       <div>Attending: ${attending}</div>
       <div>Number of People Attending: ${numberOfGuest}</div>
       <div>Guests: ${people}</div>
-      <div>Message: ${message}</div>
+      <div>Message: ${message.toUpperCase()}</div>
       <br>
       <div>Date: ${date}</div>
     `;

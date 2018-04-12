@@ -12,7 +12,7 @@ const mailTransport = nodemailer.createTransport(`smtps://${gmailEmail}:${gmailP
 // exports.helloWorld = functions.https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // });
-exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWrite(event => {
+exports.sendContactMessage = functions.database.ref('/live/{pushKey}').onWrite(event => {
   const snapshot = event.data;
 // Only send email for new messages.
   if (snapshot.previous.val() || !snapshot.val().name) {
@@ -23,10 +23,10 @@ exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWri
 
   const mailOptions = {
     to: 'tyler.m.velasco@gmail.com',
-    subject: `RSVP for the Wedding ${val.name}`,
+    subject: `${val.name} has responded ${val.attending} for the Wedding `,
     html: val.html
   };
   return mailTransport.sendMail(mailOptions).then(() => {
-    return console.log('Mail sent to: test@example.com')
+    return console.log('Mail sent to: tyler.m.velasco@gmail.com')
   })
 });
